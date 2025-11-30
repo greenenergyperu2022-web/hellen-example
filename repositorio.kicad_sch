@@ -5,47 +5,27 @@
 	(uuid "57462394-f5e8-4e95-b2a6-e2c4782f3552")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Timer:ICM7555xB"
+		(symbol "knock:Module-knock-0.2"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 8.89 0)
+			(property "Reference" "M"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "ICM7555xB"
-				(at 2.54 8.89 0)
+			(property "Value" "Module-knock-0.2"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-				(at 21.59 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf"
-				(at 21.59 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "CMOS General Purpose Timer, 555 compatible, SOIC-8"
+			(property "Footprint" "hellen-one-knock-0.2:knock"
 				(at 0 0 0)
 				(effects
 					(font
@@ -54,7 +34,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "single timer 555"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -63,7 +43,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
+			(property "Description" "Hellen-One Knock Pre-amplifier Module"
 				(at 0 0 0)
 				(effects
 					(font
@@ -72,10 +52,39 @@
 					(hide yes)
 				)
 			)
-			(symbol "ICM7555xB_0_0"
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
+			(symbol "Module-knock-0.2_1_0"
+				(rectangle
+					(start 33.02 0)
+					(end 0 -17.78)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 17.78 7.62 270)
+					(length 7.62)
+					(name "V5A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 -25.4 90)
+					(length 7.62)
 					(name "GND"
 						(effects
 							(font
@@ -83,7 +92,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "E2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -91,61 +100,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 10.16 270)
-					(length 2.54)
-					(name "VCC"
+				(pin passive line
+					(at 40.64 -10.16 180)
+					(length 7.62)
+					(name "OUT_KNOCK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "ICM7555xB_0_1"
-				(rectangle
-					(start -8.89 -7.62)
-					(end 8.89 7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -8.89 -7.62)
-					(end 8.89 7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "ICM7555xB_1_1"
-				(pin input line
-					(at -12.7 5.08 0)
-					(length 3.81)
-					(name "TR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
+					(number "E3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -153,35 +118,17 @@
 						)
 					)
 				)
-				(pin output line
-					(at 12.7 5.08 180)
-					(length 3.81)
-					(name "Q"
+				(pin passive line
+					(at -7.62 -10.16 0)
+					(length 7.62)
+					(name "IN_KNOCK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input inverted
-					(at -12.7 -5.08 0)
-					(length 3.81)
-					(name "R"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
+					(number "W1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -189,53 +136,17 @@
 						)
 					)
 				)
-				(pin input line
-					(at -12.7 0 0)
-					(length 3.81)
-					(name "CV"
+				(pin passive line
+					(at 12.7 7.62 270)
+					(length 7.62)
+					(name "VREF"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 -5.08 180)
-					(length 3.81)
-					(name "THR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 0 180)
-					(length 3.81)
-					(name "DIS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
+					(number "W2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -247,44 +158,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Timer:ICM7555xB")
-		(at 111.76 59.69 0)
+		(lib_id "knock:Module-knock-0.2")
+		(at 83.82 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "011c5167-f81a-4790-8d9a-bec2679e42de")
-		(property "Reference" "U1"
-			(at 113.9541 46.99 0)
+		(uuid "d1f4894e-fecb-4880-aa94-49b3bdb7881d")
+		(property "Reference" "M1"
+			(at 127 63.5314 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "ICM7555xB"
-			(at 113.9541 49.53 0)
+		(property "Value" "Module-knock-0.2"
+			(at 127 66.0714 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 133.35 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.intersil.com/content/dam/Intersil/documents/icm7/icm7555-56.pdf"
-			(at 133.35 69.85 0)
+		(property "Footprint" "hellen-one-knock-0.2:knock"
+			(at 83.82 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -292,8 +192,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CMOS General Purpose Timer, 555 compatible, SOIC-8"
-			(at 111.76 59.69 0)
+		(property "Datasheet" ""
+			(at 83.82 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -301,34 +201,34 @@
 				(hide yes)
 			)
 		)
-		(pin "3"
-			(uuid "caa06800-5cad-49ad-864b-01ca4cf7d39e")
+		(property "Description" "Hellen-One Knock Pre-amplifier Module"
+			(at 83.82 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "4"
-			(uuid "8ea5feea-0c48-4f03-b004-5b1033d0e4a7")
+		(pin "E1"
+			(uuid "d2134597-a37f-4e10-9e6b-9cd477dfb17c")
 		)
-		(pin "6"
-			(uuid "8b2040fc-f800-4134-b247-f977d09a3fa3")
+		(pin "W2"
+			(uuid "97f7b1fa-efa0-4654-a412-8f3413b11cf0")
 		)
-		(pin "7"
-			(uuid "824089d1-2721-40c6-a0af-b4fc0c4df883")
+		(pin "E2"
+			(uuid "d30fe6e3-77d1-4ffa-a724-90a26ace6a5e")
 		)
-		(pin "5"
-			(uuid "a81b1562-3b5a-489c-ae87-44294fc27fda")
+		(pin "W1"
+			(uuid "53e26368-b59b-4d0c-b52e-662c71c2e936")
 		)
-		(pin "8"
-			(uuid "ceb0e118-20f0-4400-a605-fd79ada66d7c")
-		)
-		(pin "2"
-			(uuid "d2c680b5-f33c-46ed-9ee3-5c0c0b029449")
-		)
-		(pin "1"
-			(uuid "caae6777-bbd8-4760-82e6-f288c08717d8")
+		(pin "E3"
+			(uuid "cdc82bba-f320-40cc-a4d6-c764e906c1f0")
 		)
 		(instances
 			(project ""
 				(path "/57462394-f5e8-4e95-b2a6-e2c4782f3552"
-					(reference "U1")
+					(reference "M1")
 					(unit 1)
 				)
 			)
